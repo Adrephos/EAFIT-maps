@@ -1,6 +1,5 @@
 import React from 'react';
 import Route from 'react-router-dom/Route'
-import logo from './logo.svg';
 import './App.css';
 import Search from './pages/search page/search';
 import { BrowserRouter } from 'react-router-dom'
