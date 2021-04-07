@@ -11,7 +11,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        
+        <header>
+          <div className="header">
+          <img src="imagenes/Logo azul.jpg" class="Logo-img" align="middle" width="50%"></img>
+          </div>
+        </header>
         <BrowserRouter>
           <div>
             
