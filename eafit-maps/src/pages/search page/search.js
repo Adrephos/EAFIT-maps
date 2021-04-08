@@ -4,6 +4,7 @@ import './search.css';
 import Input from "./components/input/Input";
 import Title from './components/title/title'
 import Navbar from "./components/Navbar/Navbar"
+import Label from "./components/label/label"
 class search extends React.Component {
 
   // fake authentication Promise
@@ -27,19 +28,39 @@ class search extends React.Component {
   render() {
     return (
       <div className="App">
-        
+        <br></br>
+        <br></br>
+        <Title text="¡Bienvenido!"></Title>
+        <Label text= "¿A DÓNDE TE DIRIGES"></Label>
+        <Label text= " EL DÍA DE HOY?"></Label>"
         <Input
               attribute={{
                 id: 'usuario',
                 name: 'usuario',
                 type: 'text',
-                placeholder: 'Buscar'
+                placeholder: 'Buscar...'
               }}
             />
-        <label text="contraseña">Contraseña:</label>
-        <title text="titulo">Titulo</title>
+            <br></br>
+        <br></br>
+            <Label text= "Búsquedas Recientes..."></Label>"
+            <div className="busqRec">
+              <div className="">
+              <label >Hola</label>
+              </div>
+              <div>
+              <labe>Hola</labe>
+              </div>
+              <div>
+              <labe>Hola</labe>
+              </div>
+              <div>
+              <labe>Hola</labe>
+              </div>
+            </div>
         <Navbar/>
       </div>
+      
     );
   }
 }

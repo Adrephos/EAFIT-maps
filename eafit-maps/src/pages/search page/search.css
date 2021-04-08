@@ -1,8 +1,27 @@
 .App{
-    background-image: url(https://vivirenelpoblado.com/wp-content/uploads/2020/11/Eafit-es-la-primera-universidad-del-pais-que-recibe-de-Icontec-la-certificacion-de-bioseguridad.jpg);
-    height: 83vh;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url(https://vivirenelpoblado.com/wp-content/uploads/2020/11/Eafit-es-la-primera-universidad-del-pais-que-recibe-de-Icontec-la-certificacion-de-bioseguridad.jpg);
+    height: 81vh;
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position-y: center;
     background-position-x: center;
+}
+#usuario{
+    width: 80%;
+}
+.subt{
+    width: 40%;
+}
+.busqRec{
+    background-color: rgba(255, 255, 255, 0.507);
+    
+    color: black;
+    margin: 0 10%;
+    border-radius: 10px;
+}
+.busqRec-element{
+    padding: 10px;
 }
