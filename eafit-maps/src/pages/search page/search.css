@@ -1,0 +1,14 @@
+body {
+    background-image: url("C:\Users\adrep\OneDrive\Escritorio\Code\React\EFIT-maps\eafit-maps\src\img\Eafit2.png");
+    background-repeat: no-repeat, repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+.welcome {
+    padding: 30px;
+    font-family: 'Gill Sans MT', Sans, 'Trebuchet MS', sans-serif;
+     font-weight: px;
+     letter-spacing: 100;
+     color: rgb(255, 255, 255);
+}
