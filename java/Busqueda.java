@@ -1,1 +1,4 @@
-pub
+public class Busqueda {
+
+    
+}
