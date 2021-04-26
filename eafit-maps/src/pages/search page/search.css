@@ -22,6 +22,8 @@
     margin: 0 10%;
     border-radius: 10px;
 }
-.busqRec-element{
+.element{
     padding: 10px;
+    border-color: rgba(0, 0, 0, 0.247);
+    border-style: solid;
 }

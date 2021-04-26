@@ -45,16 +45,16 @@ class search extends React.Component {
         <br></br>
             <Label text= "Búsquedas Recientes..."></Label>"
             <div className="busqRec">
-              <div className="">
+              <div className="element">
               <label >Hola</label>
               </div>
-              <div>
+              <div className="element">
               <labe>Hola</labe>
               </div>
-              <div>
+              <div className="element">
               <labe>Hola</labe>
               </div>
-              <div>
+              <div className="element">
               <labe>Hola</labe>
               </div>
             </div>
