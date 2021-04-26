@@ -1,7 +1,10 @@
 body {
-    background-image: url("C:\Users\adrep\OneDrive\Escritorio\Code\React\EFIT-maps\eafit-maps\src\img\Eafit2.png");
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url(https://vivirenelpoblado.com/wp-content/uploads/2020/11/Eafit-es-la-primera-universidad-del-pais-que-recibe-de-Icontec-la-certificacion-de-bioseguridad.jpg);   
     background-repeat: no-repeat, repeat;
-    background-size: cover;
+    background-size: auto 100%;
     height: 100vh;
     background-position: center;
 }
@@ -11,4 +14,23 @@ body {
      font-weight: px;
      letter-spacing: 100;
      color: rgb(255, 255, 255);
+}
+    
+#usuario{
+    width: 80%;
+}
+.subt{
+    width: 40%;
+}
+.busqRec{
+    background-color: rgba(255, 255, 255, 0.507);
+    
+    color: black;
+    margin: 0 10%;
+    border-radius: 10px;
+}
+.element{
+    padding: 10px;
+    border-color: rgba(0, 0, 0, 0.247);
+    border-style: solid;
 }

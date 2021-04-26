@@ -13,7 +13,7 @@ class App extends React.Component {
       <div className="App">
         <header>
           <div className="header">
-          <img src="imagenes/Logo azul.jpg" class="Logo-img" align="middle" width="50%"></img>
+          <img src="imagenes/Logo azul.jpg" class="Logo-img" align="middle" height="100%"></img>
           </div>
         </header>
         <BrowserRouter>

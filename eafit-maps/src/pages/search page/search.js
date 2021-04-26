@@ -5,6 +5,7 @@ import SearchBox from './components/SearchBox/SearchBox';
 import Input from "./components/input/Input";
 import Title from './components/title/title'
 import Navbar from "./components/Navbar/Navbar"
+import Label from "./components/label/label"
 class search extends React.Component {
 
   // fake authentication Promise
@@ -33,8 +34,26 @@ class search extends React.Component {
           <h3>¿A DÓNDE TE DIREJES HOY?</h3>
         </div>
         <SearchBox placeholder="Buscar..." handleChange={this.handleChange}/>
+        <br></br>
+        <br></br>
+            <Label text= "Búsquedas Recientes..."></Label>"
+            <div className="busqRec">
+              <div className="element">
+              <label >Hola</label>
+              </div>
+              <div className="element">
+              <labe>Hola</labe>
+              </div>
+              <div className="element">
+              <labe>Hola</labe>
+              </div>
+              <div className="element">
+              <labe>Hola</labe>
+              </div>
+            </div>
         <Navbar/>
       </div>
+      
     );
   }
 }
