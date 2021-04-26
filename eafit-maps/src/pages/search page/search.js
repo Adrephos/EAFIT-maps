@@ -1,6 +1,7 @@
 import React from 'react';
 import Route from 'react-router-dom/Route'
 import './search.css';
+import SearchBox from './components/SearchBox/SearchBox';
 import Input from "./components/input/Input";
 import Title from './components/title/title'
 import Navbar from "./components/Navbar/Navbar"
@@ -28,20 +29,12 @@ class search extends React.Component {
   render() {
     return (
       <div className="App">
+        <div className="welcome">
+          <h1>¡BIENVENIDO!</h1>
+          <h3>¿A DÓNDE TE DIREJES HOY?</h3>
+        </div>
+        <SearchBox placeholder="Buscar..." handleChange={this.handleChange}/>
         <br></br>
-        <br></br>
-        <Title text="¡Bienvenido!"></Title>
-        <Label text= "¿A DÓNDE TE DIRIGES"></Label>
-        <Label text= " EL DÍA DE HOY?"></Label>"
-        <Input
-              attribute={{
-                id: 'usuario',
-                name: 'usuario',
-                type: 'text',
-                placeholder: 'Buscar...'
-              }}
-            />
-            <br></br>
         <br></br>
             <Label text= "Búsquedas Recientes..."></Label>"
             <div className="busqRec">
