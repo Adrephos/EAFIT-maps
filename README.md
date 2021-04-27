@@ -1,2 +1,2 @@
 # EAFIT-maps
-A simple web app using react native.
+A simple web app using react.
