@@ -8,6 +8,12 @@ public class Bloque {
     private double z;
     private static ArrayList<Bloque> ListaBloques= new ArrayList<Bloque>();
 
+    public static void crearBloques(){
+        new Bloque(7, "Carnetización", 7, 7, 7);
+        new Bloque(29, "Admisiones", 7, 7, 7);
+        new Bloque(32, "Biblioteca", 7, 7, 7);
+        new Bloque(38, "Humanidades", 7, 7, 7);
+    }
     public Bloque(int Numero, String Descripcion,  double x, double y, double z) {
         this.Numero = Numero;
         this.Descripcion = Descripcion;
@@ -21,6 +27,18 @@ public class Bloque {
         ArrayList<Bloque> BloquesEncontrados = new ArrayList<Bloque>();
         for (int i = 0; i < Bloque.getListaBloques().size(); i++) {
             if (Bloque.getListaBloques().get(i).getNumero() == n) {
+                BloquesEncontrados.add(Bloque.getListaBloques().get(i));
+            }
+        }
+        if (BloquesEncontrados.size() == 0) {
+            System.out.println("La Búsqueda no arrojó resultados");
+        }
+        return BloquesEncontrados;
+    }
+    public static ArrayList<Bloque> Busqueda(String n) {
+        ArrayList<Bloque> BloquesEncontrados = new ArrayList<Bloque>();
+        for (int i = 0; i < Bloque.getListaBloques().size(); i++) {
+            if (Bloque.getListaBloques().get(i).getDescripcion().equals(n)) {
                 BloquesEncontrados.add(Bloque.getListaBloques().get(i));
             }
         }
