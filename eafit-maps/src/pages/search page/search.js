@@ -26,14 +26,16 @@ class search extends React.Component {
     })
   }
 
+  
+
   render() {
     return (
       <div className="App">
         <div className="welcome">
           <h1>¡BIENVENIDO!</h1>
-          <h3>¿A DÓNDE TE DIREJES HOY?</h3>
+          <h3>¿A DÓNDE TE DIRIJES HOY?</h3>
         </div>
-        <SearchBox placeholder="Buscar..." handleChange={this.handleChange}/>
+        <SearchBox id="inputSearch" placeholder="Buscar..." handleChange={this.handleChange}/>
         <br></br>
         <br></br>
             <Label text= "Búsquedas Recientes..."></Label>"

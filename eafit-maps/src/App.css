@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   height: 100vh;
+  
 }
 
 .App-logo {
@@ -17,13 +18,18 @@
 .header {
   background-color: #00065a;
   min-height: 10vh;
-  max-height: 18vh;
+  max-height: 12vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.Header-img{
+  min-height: 10vh;
+  max-height: 12vh;
+  width: auto;
 }
 
 .App-link {

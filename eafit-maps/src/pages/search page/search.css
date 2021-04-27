@@ -7,15 +7,21 @@ body {
     background-size: auto 100%;
     height: 100vh;
     background-position: center;
+    
 }
 .welcome {
-    padding: 30px;
+    padding: 10vh 5vh 5vh 5vh;
     font-family: 'Gill Sans MT', Sans, 'Trebuchet MS', sans-serif;
      font-weight: px;
      letter-spacing: 100;
      color: rgb(255, 255, 255);
 }
+.search{
+    box-sizing: content-box;
+    width: 70%;
+    max-width: 80vh;;
     
+}
 #usuario{
     width: 80%;
 }
@@ -24,9 +30,9 @@ body {
 }
 .busqRec{
     background-color: rgba(255, 255, 255, 0.507);
-    
+    max-width: 80vw;
     color: black;
-    margin: 0 10%;
+    margin: 0 auto;
     border-radius: 10px;
 }
 .element{
