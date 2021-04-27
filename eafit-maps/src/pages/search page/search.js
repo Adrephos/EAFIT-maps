@@ -6,6 +6,7 @@ import Input from "./components/input/Input";
 import Title from './components/title/title'
 import Navbar from "./components/Navbar/Navbar"
 import Label from "./components/label/label"
+
 class search extends React.Component {
 
   // fake authentication Promise
