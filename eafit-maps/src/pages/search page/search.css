@@ -20,7 +20,7 @@ body {
     box-sizing: content-box;
     width: 70%;
     max-width: 80vh;;
-    
+    margin: 0 auto;
 }
 #usuario{
     width: 80%;
