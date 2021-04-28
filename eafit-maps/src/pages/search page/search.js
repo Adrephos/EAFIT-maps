@@ -26,16 +26,6 @@ class search extends Component {
     })
   }
 
-  state={
-    busqueda: ''
-  }
-    
-  onChange=async e=>{
-    e.persist();
-    await this.setState({busqueda: e.target.value});
-    console.log(this.state.busqueda);
-  }
-
   render() {
     return (
       <div className="App">
@@ -43,7 +33,7 @@ class search extends Component {
           <h1>¡BIENVENIDO!</h1>
           <h3>¿A DÓNDE TE DIRIJES HOY?</h3>
         </div>
-          <SearchBox id="inputSearch" placeholder="Buscar..." handleChange={this.handleChange} />
+          <SearchBox id="inputSearch"  />
         <br></br>
         <br></br>
         <Label text="Búsquedas Recientes..."></Label>"
