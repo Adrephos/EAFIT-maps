@@ -4,7 +4,7 @@
     font-family: "Roboto", sans-serif;
 
     width: 80%;
-    padding: 7px 15px;
+    padding: 0px 0px;
     color: #999da0; 
     border-style: hidden;
     border-radius: 20px ;
@@ -22,7 +22,7 @@ Input{
   
       width: 90%;
       padding: 0;
-      color: #999da0; 
+      color: #303030; 
       border-style: hidden;
       border-radius: 20px ;
       border-color: #9c9a9af1 ;
@@ -30,6 +30,10 @@ Input{
       box-sizing: border-box;
       font-size: 1em; 
       font-weight: bold;
+    }
+    .bar{
+      padding: 7px 5px;
+      outline: 0px solid #999da0;
     }
     Input::placeholder{
       
@@ -48,4 +52,21 @@ Input{
         border-style: hidden;
         padding-right: 0;
       }
-  
+      #box-search{
+        list-style-type:none;
+        background: rgb(240, 237, 237);
+        max-width: 80vw;
+        color: black;
+        margin: 0 auto;
+        border-radius: 10px;
+        text-align: left;
+        overflow: hidden;
+        display: none;
+        
+    }
+    #box-search .element{
+      margin: auto;
+        padding: 10px 0px;
+        border-style: none;
+    }
+    
