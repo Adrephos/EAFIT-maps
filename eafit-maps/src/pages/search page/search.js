@@ -6,6 +6,19 @@ import Navbar from "./components/Navbar/Navbar"
 import Label from "./components/label/label"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
+
+const listaBloques = [
+  { id: 1, numero: 7, descripcion: "Carnetización", x: 7, y: 7, z:7 },
+  { id: 2, numero: 29, descripcion: "Admisiones", x: 7, y: 7, z:7 },
+  { id: 3, numero: 32, descripcion: "Biblioteca", x: 7, y: 7, z:7 },
+  { id: 4 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 }
+]
+const listItems = listaBloques.map((bloques) =>
+<li key={bloques.id} id={bloques.id} className="element">
+    <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
+    </li>
+);
+
 class search extends Component {
 
   // fake authentication Promise
@@ -33,23 +46,15 @@ class search extends Component {
           <h1>¡BIENVENIDO!</h1>
           <h3>¿A DÓNDE TE DIRIJES HOY?</h3>
         </div>
-          <SearchBox id="inputSearch"  />
+        <SearchBox id="inputSearch" />
         <br></br>
         <br></br>
-        <Label text="Búsquedas Recientes..."></Label>"
-        <div className="busqRec">
-          <div className="element">
-            <label >Hola</label>
-          </div>
-          <div className="element">
-            <labe>Hola</labe>
-          </div>
-          <div className="element">
-            <labe>Hola</labe>
-          </div>
-          <div className="element">
-            <labe>Hola</labe>
-          </div>
+        <div id="busqRec">
+          <Label text="Búsquedas Recientes..."></Label>
+          <ul id="box">
+            {listItems}
+          </ul>
+
         </div>
 
         <Navbar />

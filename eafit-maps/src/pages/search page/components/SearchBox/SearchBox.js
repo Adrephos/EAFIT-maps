@@ -5,13 +5,17 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 
 const listaBloques = [
-    { numero: 7, descripcion: "Carnetización" },
-    { numero: 29, descripcion: "Admisiones" },
-    { numero: 32, descripcion: "Biblioteca" }
+    { id: 1, numero: 7, descripcion: "Carnetización", x: 7, y: 7, z:7 },
+    { id: 2, numero: 29, descripcion: "Admisiones", x: 7, y: 7, z:7 },
+    { id: 3, numero: 32, descripcion: "Biblioteca", x: 7, y: 7, z:7 },
+    { id: 4 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 }
 ]
+const listItems = listaBloques.map((bloques) =>
+  <li key={bloques.id} id={bloques.id} className="element">
+      <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
+      </li>
+);
 
-var inputSearch = document.getElementById("inputSearch");
-var box_search = document.getElementById("box-search");
 class SearchBox extends Component {
     state = {
         busqueda: '',
@@ -21,7 +25,6 @@ class SearchBox extends Component {
     onChange = async e => {
         e.persist();
         await this.setState({ busqueda: e.target.value });
-        console.log(this.state.busqueda);
         this.filtrarElementos();
         document.getElementById("inputSearch").addEventListener("keyup", this.buscador_interno)
     }
@@ -34,6 +37,7 @@ class SearchBox extends Component {
         });
         this.setState({ Bloques: search })
     }
+
     componentDidMount() {
         this.setState({ Bloques: listaBloques })
     }
@@ -50,9 +54,11 @@ class SearchBox extends Component {
 
                 li[i].style.display = "";
                 document.getElementById("box-search").style.display = "block"
-
+                document.getElementById("busqRec").style.display = "none"
+                
                 if (document.getElementById("inputSearch").value === "") {
                     document.getElementById("box-search").style.display = "none";
+                    document.getElementById("busqRec").style.display = "block"
                 }
             } else {
                 li[i].style.display = "none";
@@ -76,19 +82,9 @@ class SearchBox extends Component {
 
                 </div>
                 <ul id='box-search'>
-                    <li className="element top">
-                        <a>Bloque 7: Carnetización</a>
-                    </li>
-                    <li className="element">
-                        <a>Bloque 29: Admisiones</a>
-                    </li>
-                    <li className="element">
-                        <a>Bloque 32: Biblioteca</a>
-                    </li>
-                    <li className="element bottom">
-                        <a>Bloque 38: Humanidades</a>
-                    </li>
+                    {listItems}
                 </ul>
+                
             </div>
         )
     }
