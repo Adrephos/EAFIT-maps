@@ -5,15 +5,22 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
 
 const listaBloques = [
-    { id: 1, numero: 7, descripcion: "Carnetización", x: 7, y: 7, z:7 },
-    { id: 2, numero: 29, descripcion: "Admisiones", x: 7, y: 7, z:7 },
-    { id: 3, numero: 32, descripcion: "Biblioteca", x: 7, y: 7, z:7 },
-    { id: 4 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 }
+    { id: 1, numero: 7, descripcion: "Carnetización", x: 7, y: 7, z: 7 },
+    { id: 2, numero: 29, descripcion: "Admisiones", x: 7, y: 7, z: 7 },
+    { id: 3, numero: 32, descripcion: "Biblioteca", x: 7, y: 7, z: 7 },
+    { id: 4, numero: 38, descripcion: "Humanidades", x: 7, y: 7, z: 7 },
+    /*{ id: 5 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
+    { id: 6 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
+    { id: 7 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
+    { id: 8 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
+    { id: 9 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
+    { id: 10 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
+    { id: 11 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 }*/
 ]
 const listItems = listaBloques.map((bloques) =>
-  <li key={bloques.id} id={bloques.id} className="element">
-      <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
-      </li>
+    <li key={bloques.id} id={bloques.id} className="element">
+        <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
+    </li>
 );
 
 class SearchBox extends Component {
@@ -25,18 +32,18 @@ class SearchBox extends Component {
     onChange = async e => {
         e.persist();
         await this.setState({ busqueda: e.target.value });
-        this.filtrarElementos();
+        //this.filtrarElementos();
         document.getElementById("inputSearch").addEventListener("keyup", this.buscador_interno)
     }
 
-    filtrarElementos = () => {
+    /*filtrarElementos = () => {
         var search = listaBloques.filter(item => {
             if (item.numero.toString().includes(this.state.busqueda)) {
                 return item;
             }
         });
         this.setState({ Bloques: search })
-    }
+    }*/
 
     componentDidMount() {
         this.setState({ Bloques: listaBloques })
@@ -55,7 +62,7 @@ class SearchBox extends Component {
                 li[i].style.display = "";
                 document.getElementById("box-search").style.display = "block"
                 document.getElementById("busqRec").style.display = "none"
-                
+
                 if (document.getElementById("inputSearch").value === "") {
                     document.getElementById("box-search").style.display = "none";
                     document.getElementById("busqRec").style.display = "block"
@@ -65,6 +72,7 @@ class SearchBox extends Component {
             }
         }
     }
+
 
     render() {
         return (
@@ -84,7 +92,7 @@ class SearchBox extends Component {
                 <ul id='box-search'>
                     {listItems}
                 </ul>
-                
+
             </div>
         )
     }

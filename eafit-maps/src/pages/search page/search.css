@@ -7,8 +7,8 @@ body {
     background-size: auto 100%;
     height: 100vh;
     background-position: center;
-    
 }
+
 .welcome {
     padding: 10vh 5vh 5vh 5vh;
     font-family: 'Gill Sans MT', Sans, 'Trebuchet MS', sans-serif;
@@ -44,6 +44,17 @@ body {
 #busqRec .element{
     padding: 10px;
     border-color: rgba(0, 0, 0, 0.247);
+    border-style: solid;
+    list-style-type:none;
+}
+
+#busqRec .more{
+    padding: 10px;
+    border-color: rgba(0, 0, 0, 0.247);
+    background-color: rgba(255, 255, 255, 0.466);
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     border-style: solid;
     list-style-type:none;
 }
