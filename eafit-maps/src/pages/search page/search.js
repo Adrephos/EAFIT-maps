@@ -7,6 +7,7 @@ import Label from "../components/label/label"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 
+
 const listaBloques = [
   { id: 1, numero: 7, descripcion: "Carnetización", x: 7, y: 7, z: 7 },
   { id: 2, numero: 29, descripcion: "Admisiones", x: 7, y: 7, z: 7 },
