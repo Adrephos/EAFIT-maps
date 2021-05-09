@@ -1,7 +1,6 @@
 .App {
   text-align: center;
   height: 88vh;
-  
 }
 
 .App-logo {
@@ -25,11 +24,13 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 1030;
 }
 .Header-img{
   min-height: 10vh;
   max-height: 12vh;
   width: auto;
+  
 }
 
 .App-link {

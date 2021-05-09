@@ -35,8 +35,6 @@ class map extends Component {
                 <img src={mapImage} alt=""/>
             </div>
           </Draggable>
-            
-  
           <Navbar />
         </div>
   
