@@ -14,17 +14,17 @@ class Navbar extends React.Component {
         <div className="nav navbar-header ">
 
           <ul className={this.getNavLinkClass("/")} className="navbar-nav navbar-center" id="Driving">
-            <NavLink to="/Driving" ><li className="nav-item" >
+            <NavLink to="/" ><li className="nav-item" >
               <img src="imagenes/search-icon.png" alt=""></img>
             </li></NavLink>
           </ul>
           <ul className="navbar-nav navbar-center" >
-          <NavLink to="/Exploration" ><li className="nav-item" >
+          <NavLink to="/map" ><li className="nav-item" >
               <img src="imagenes/map-icon.png" alt=""></img>
             </li></NavLink>
           </ul>
           <ul className="navbar-nav navbar-center" >
-          <NavLink to="/Perfil" ><li className="nav-item" >
+          <NavLink to="/user" ><li className="nav-item" >
               <img src="imagenes/Perfil.png" alt=""></img>
             </li></NavLink>
           </ul>

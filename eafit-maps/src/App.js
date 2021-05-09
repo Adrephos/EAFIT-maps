@@ -2,7 +2,7 @@ import React from 'react';
 import Route from 'react-router-dom/Route'
 import './App.css';
 import Search from './pages/search page/search';
-import Map from './pages/search page/search';
+import Map from './pages/map page/map';
 import User from './pages/search page/search';
 import { BrowserRouter } from 'react-router-dom'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -15,7 +15,7 @@ class App extends React.Component {
       <div className="App">
         <header>
           <div className="header">
-          <img src="imagenes/Logo azul.jpg" class="Header-img" align="middle" width="50%"></img>
+          <img src="imagenes/Logo azul.jpg" class="Header-img" align="middle" width="50%"/>
           </div>
         </header>
         <BrowserRouter>
