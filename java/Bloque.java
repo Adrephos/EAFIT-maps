@@ -83,8 +83,5 @@ public class Bloque {
 
     public static ArrayList<Bloque> getListaBloques() {
         return Bloque.ListaBloques;
-    }
-    
-
-    
+    }    
 }
