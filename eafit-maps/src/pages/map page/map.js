@@ -30,11 +30,23 @@ class map extends Component {
       return (
         <div className="App">
 
-          <Draggable>
-            <div className="handle">
-                <img src={mapImage} alt=""/>
-            </div>
-          </Draggable>
+          <div className="map">
+            <Draggable
+            axis="x"
+            handle=".handle"
+            defaultPosition={{x: 0, y: 0}}
+            position={null}
+            grid={[25, 25]}
+            scale={1}
+            onStart={this.handleStart}
+            onDrag={this.handleDrag}
+            onStop={this.handleStop}>
+              <div className="handle">
+                  <img src={mapImage} alt=""/>
+              </div>
+            </Draggable>
+          </div>
+
           <Navbar />
         </div>
   
