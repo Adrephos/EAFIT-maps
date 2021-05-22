@@ -8,7 +8,7 @@
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .App-logo {
