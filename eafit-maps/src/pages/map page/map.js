@@ -28,7 +28,7 @@ class map extends Component {
   
     render() {
       return (
-        <div className="App">
+        <div className="content">
 
           <div className="map">
             <Draggable

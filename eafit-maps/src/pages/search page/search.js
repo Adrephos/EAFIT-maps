@@ -18,7 +18,7 @@ const listaBloques = [
   { id: 3, numero: 32, descripcion: "Biblioteca", x: 7, y: 7, z: 7 },
 ]
 
-const listItems = listaBloques.map((bloques,index) =>
+const listItems = listaBloques.map((bloques, index) =>
   <li key={bloques.id} id={bloques.id} className="element" >
     <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
   </li>
@@ -46,7 +46,7 @@ class search extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="content">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <div className="welcome">
           <h1>¡BIENVENIDO!</h1>
@@ -65,6 +65,7 @@ class search extends Component {
           </ul>
 
         </div>
+
 
         <Navbar />
       </div>

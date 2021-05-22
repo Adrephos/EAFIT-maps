@@ -1,12 +1,8 @@
-body {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
-      ),url(https://vivirenelpoblado.com/wp-content/uploads/2020/11/Eafit-es-la-primera-universidad-del-pais-que-recibe-de-Icontec-la-certificacion-de-bioseguridad.jpg);   
-    background-repeat: no-repeat, repeat;
-    background-size: cover;
-    height: 100vh;
-    background-position: center;
+
+
+.content{
+    overflow-y: auto;
+    margin-top: 10vh;
 }
 
 .welcome {
