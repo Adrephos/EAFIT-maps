@@ -21,7 +21,7 @@ const listaBloques = [
 
 const listItems = listaBloques.map((bloques, index) =>
   <li key={bloques.id} id={bloques.id} className="element" >
-    <Link to="/map/2" className="a">Bloque {bloques.numero}: {bloques.descripcion}</Link>
+    <Link to="/map" className="a">Bloque {bloques.numero}: {bloques.descripcion}</Link>
   </li>
 );
 
