@@ -9,13 +9,6 @@ const listaBloques = [
     { id: 2, numero: 29, descripcion: "Admisiones", x: 7, y: 7, z: 7 },
     { id: 3, numero: 32, descripcion: "Biblioteca", x: 7, y: 7, z: 7 },
     { id: 4, numero: 38, descripcion: "Humanidades", x: 7, y: 7, z: 7 },
-    /*{ id: 5 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
-    { id: 6 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
-    { id: 7 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
-    { id: 8 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
-    { id: 9 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
-    { id: 10 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 },
-    { id: 11 ,numero: 38, descripcion: "Humanidades", x: 7, y: 7, z:7 }*/
 ]
 const listItems = listaBloques.map((bloques) =>
     <li key={bloques.id} id={bloques.id} className="element">

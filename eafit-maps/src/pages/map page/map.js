@@ -13,7 +13,7 @@ class map extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      relX: '', relY: '', relWidth: '', relHeight: ''
+      x: '', y: '', z: '', z: ''
     };
     console.log(this.state.relX)
   }
@@ -39,14 +39,39 @@ class map extends Component {
     const { id } = this.props.match.params;
     getPost(id)
       .then((res) => {
-        const { relX, relY, relWidth, relHeight } = res.data[0];
+        const { x, y, z, id } = res.data[0];
         this.setState({
-          relX, relY, relWidth, relHeight
+          x, y, z, id
         });
       })
       .catch((err) => console.log(err))
   }
 
+  onDoubleClickOnCard = event => {
+    event.preventDefault()
+    event.stopPropagation()
+
+    const zoneRect = event.currentTarget.getBoundingClientRect()
+    const layoutRect = event.currentTarget.parentNode.getBoundingClientRect()
+
+    const zoom = this.prismaZoom.current.getZoom()
+
+    if (zoom > 1) {
+      this.prismaZoom.current.reset()
+      return
+    }
+
+    const [relX, relY] = [
+      (zoneRect.left - layoutRect.left) / zoom,
+      (zoneRect.top - layoutRect.top) / zoom
+    ]
+    const [relWidth, relHeight] = [
+      zoneRect.width / zoom,
+      zoneRect.height / zoom
+    ]
+    
+    this.prismaZoom.current.zoomToZone(relX, relY, relWidth, relHeight)
+  }
 
   /* const id = this.props.match.params.id;
   let Prisma = document.getElementById('Prisma')
@@ -54,7 +79,7 @@ class map extends Component {
    */
   render() {
 
-    const { relX, relY, relWidth, relHeight } = this.state
+    const { x, y, z, id } = this.state
     const styles = {
       /* transform: `scale(${id})` */
       transform: 'translate3d(0px, 0px, 0px) scale(${id})'
@@ -64,32 +89,15 @@ class map extends Component {
       <div className="content">
 
         <div className="map">
-          {/* <Draggable
-            axis="x"
-            handle=".handle"
-            defaultPosition={{x: 0, y: 0}}
-            position={null}
-            grid={[25, 25]}
-            scale={1}
-            onStart={this.handleStart}
-            onDrag={this.handleDrag}
-            onStop={this.handleStop}>
-              <div className="handle">
-                  <img src={mapImage} alt=""/>
-              </div>
-            </Draggable> */}
-            <br/>
-            <br/>
-            <br/>
-            <p>{relX}</p>
-          <PrismaZoom id="prisma" style={{ styles }} >
           
-            <img src={mapImage} />
+          <PrismaZoom id="prisma" ref={this.prismaZoom}>
+
+            <img src={mapImage} onDoubleClick={this.onDoubleClickOnCard}/>
 
           </PrismaZoom>
-          
+
         </div>
-        
+
         <Navbar />
       </div>
 
