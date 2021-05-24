@@ -4,6 +4,7 @@ import './App.css';
 import Search from './pages/search page/search';
 import Map from './pages/map page/map';
 import User from './pages/search page/search';
+import data from './pages/utils/data'
 import { BrowserRouter } from 'react-router-dom'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 class App extends React.Component {
@@ -19,7 +20,9 @@ class App extends React.Component {
         <BrowserRouter>
           <div>
             <Route exact path="/" component={Search} />
-            <Route exact path="/map" component={Map} />
+            <Route path="/map" component={Map} />
+            <Route path="/map/:id" exact
+                strict component={Map} />
             <Route exact path="/user" component={User} />
           </div>
         </BrowserRouter>

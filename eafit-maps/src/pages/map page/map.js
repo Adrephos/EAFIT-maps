@@ -6,8 +6,17 @@ import Navbar from "../components/Navbar/Navbar"
 import GridLayout from 'react-grid-layout';
 import Draggable, { DraggableCore } from 'react-draggable';
 import PrismaZoom from 'react-prismazoom'
+import { getPost } from '../utils/api';
 
 class map extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      relX: '', relY: '', relWidth: '', relHeight: ''
+    };
+    console.log(this.state.relX)
+  }
 
   // fake authentication Promise
   authenticate() {
@@ -25,9 +34,32 @@ class map extends Component {
         }, 2000)
       }
     })
+
+
+    const { id } = this.props.match.params;
+    getPost(id)
+      .then((res) => {
+        const { relX, relY, relWidth, relHeight } = res.data[0];
+        this.setState({
+          relX, relY, relWidth, relHeight
+        });
+      })
+      .catch((err) => console.log(err))
   }
 
+
+  /* const id = this.props.match.params.id;
+  let Prisma = document.getElementById('Prisma')
+  Prisma.zoomToZone (id, id, id, id)
+   */
   render() {
+
+    const { relX, relY, relWidth, relHeight } = this.state
+    const styles = {
+      /* transform: `scale(${id})` */
+      transform: 'translate3d(0px, 0px, 0px) scale(${id})'
+    };
+
     return (
       <div className="content">
 
@@ -46,11 +78,18 @@ class map extends Component {
                   <img src={mapImage} alt=""/>
               </div>
             </Draggable> */}
-          <PrismaZoom>
+            <br/>
+            <br/>
+            <br/>
+            <p>{relX}</p>
+          <PrismaZoom id="prisma" style={{ styles }} >
+          
             <img src={mapImage} />
-          </PrismaZoom>
-        </div>
 
+          </PrismaZoom>
+          
+        </div>
+        
         <Navbar />
       </div>
 

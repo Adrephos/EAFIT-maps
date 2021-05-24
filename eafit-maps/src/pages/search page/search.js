@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Route, {Link} from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom';
+import { withRouter } from "react-router";
 import './search.css';
 import SearchBox from '../components/SearchBox/SearchBox';
 import Navbar from "../components/Navbar/Navbar"
@@ -20,7 +21,7 @@ const listaBloques = [
 
 const listItems = listaBloques.map((bloques, index) =>
   <li key={bloques.id} id={bloques.id} className="element" >
-    <Link to="/map" className="a">Bloque {bloques.numero}: {bloques.descripcion}</Link>
+    <Link to="/map/2" className="a">Bloque {bloques.numero}: {bloques.descripcion}</Link>
   </li>
 );
 
@@ -43,8 +44,8 @@ class search extends Component {
       }
     })
   }
-
   render() {
+    
     return (
       <div className="content">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
