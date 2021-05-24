@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './searchbox.css'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
-
+import {Link} from 'react-router-dom'
 
 const listaBloques = [
     { id: 1, numero: 7, descripcion: "Carnetización", x: 7, y: 7, z: 7 },
@@ -19,7 +19,7 @@ const listaBloques = [
 ]
 const listItems = listaBloques.map((bloques) =>
     <li key={bloques.id} id={bloques.id} className="element">
-        <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
+        <Link to="/map" className="a">Bloque {bloques.numero}: {bloques.descripcion}</Link>
     </li>
 );
 

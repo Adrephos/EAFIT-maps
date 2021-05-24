@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Route from 'react-router-dom/Route'
+import Route, {Link} from 'react-router-dom'
 import './search.css';
 import SearchBox from '../components/SearchBox/SearchBox';
 import Navbar from "../components/Navbar/Navbar"
@@ -20,7 +20,7 @@ const listaBloques = [
 
 const listItems = listaBloques.map((bloques, index) =>
   <li key={bloques.id} id={bloques.id} className="element" >
-    <a>Bloque {bloques.numero}: {bloques.descripcion}</a>
+    <Link to="/map" className="a">Bloque {bloques.numero}: {bloques.descripcion}</Link>
   </li>
 );
 
